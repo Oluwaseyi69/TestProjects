@@ -1,10 +1,9 @@
 package Diaries;
 
 import DiaryApp.Diary;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class DiariesTest {
     Diaries diaries;
@@ -15,11 +14,13 @@ public class DiariesTest {
     @Test
     public void testThat_A_DiaryCanBeAdded(){
         diaries.addDiary("temitope","seyi");
-        assertEquals(new Diary("temitope","seyi").getUsername(),diaries.findByUsername("temitope").getUsername());
+        Assertions.assertEquals(new Diary("temitope","seyi").getUsername(), diaries.findByUsername("temitope").getUsername());
 
     }
     @Test
     public void testThat_A_DiaryCanBeDeleted(){
+        diaries.addDiary("Anu","Banwo");
         diaries.deleteDiary("Anu","Banwo");
+        Assertions.assertEquals(new Diary("Anu", "Banwo").getUsername(),diaries.findByUsername("Anu").getUsername());
     }
 }

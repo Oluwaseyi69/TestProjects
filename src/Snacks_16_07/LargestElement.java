@@ -2,6 +2,14 @@ package Snacks_16_07;
 
 
 public class LargestElement {
+    public static void main(String[] args) {
+        LargestElement largestElement = new LargestElement();
+        largestElement.getLargestElement(new int[]{7, 9, 98, 65});
+        System.out.println(largestElement);
+    }
+
+
+
 
     public int getLargestElement;
     public static int [] numbers;
@@ -18,7 +26,7 @@ public class LargestElement {
                 largestElement = numbers[i];
             }
         }
-       return largestElement;
+        return largestElement;
     }
 
 }

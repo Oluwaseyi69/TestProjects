@@ -1,3 +1,5 @@
+package Snacks_16_07;
+
 public class NestedLoops {
     public static void main(String[] args) {
         triangle(8);

@@ -1,3 +1,5 @@
+package Snacks_16_07;
+
 public class ArrowPicture {
     public static void main(String[] args) {
        int[][] picture = {

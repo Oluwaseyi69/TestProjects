@@ -1,3 +1,5 @@
+package Snacks_16_07;
+
 public class CreditCardValidator{
     private String cardNumber;
 
