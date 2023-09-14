@@ -43,7 +43,7 @@ public class DiaryAppTest {
     @Test
     public void testThatEntryCanBeUpdated(){
         diary.createEntry(2,"Dear Diary","Thanks to the giver of life");
-        diary.updateEntry(2,"Dear","Thankful");
+        diary.updateNewEntry(2,"Dear","Thankful");
         Assertions.assertEquals(new Entry(2,"Dear","Thankful").getEntry(),diary.findEntry(2).getEntry());
     }
 

@@ -31,6 +31,15 @@ public class Diary {
         this.password = password;
 
     }
+    public String validatePassword(String password) throws IllegalArgumentException {
+        if (this.password.equals(password)) {
+
+            return password;
+        } else {
+            throw new IllegalArgumentException("Input correct information");
+        }
+    }
+
 
     public void createEntry(int id, String title, String body) {
         Entry entry = new Entry(id,title,body);
@@ -52,7 +61,7 @@ public class Diary {
         diary.remove(entry);
     }
 
-    public void updateEntry(int id, String title, String body) {
+    public void updateNewEntry(int id, String title, String body) {
         Entry entry = findEntry(id);
         entry.setId(id);
         entry.setTitle(title);

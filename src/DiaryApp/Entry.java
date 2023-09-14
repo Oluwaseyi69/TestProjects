@@ -1,11 +1,10 @@
 package DiaryApp;
 
-import java.time.LocalDate;
-
 public class Entry {
     private  String body;
     private String title;
     private int id;
+    private String username;
 
 
     public  Entry(int id, String title, String body){
@@ -30,5 +29,12 @@ public class Entry {
 
     public void setBody(String body) {
         this.body = body;
+    }
+    public void setUsername(String username){
+        this.username = username;
+    }
+
+    public String getUsername(){
+        return username;
     }
 }
