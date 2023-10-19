@@ -2,6 +2,7 @@ package DiaryApp;
 
 import Diaries.Diaries;
 
+import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class DiaryMain {
@@ -35,15 +36,14 @@ public class DiaryMain {
         String userInput = scanner.nextLine();
 
         System.out.println("Create Diary Account");
-        if (userInput.equals("1")) {
-            createAccount();
-        } else if (userInput.equals("2")) {
-            login();
-        } else if (userInput.equals("3")) {
-            System.exit(0);
-        } else {
-            System.out.println("You Inputted an Invalid Entry");
-            newAccount();
+        switch (userInput) {
+            case "1" -> createAccount();
+            case "2" -> login();
+            case "3" -> System.exit(0);
+            default -> {
+                System.out.println("You Inputted an Invalid Entry");
+                newAccount();
+            }
         }
     }
 
@@ -151,13 +151,16 @@ public class DiaryMain {
     }
 
     public static String inputMethod(String prompt){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(prompt);
-        return scanner.nextLine();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print(prompt);
+//        return scanner.nextLine();
+        JOptionPane.showInputDialog(prompt);
 
+        return prompt;
     }
     public static void display(String message){
-        System.out.println(message);
+//        System.out.println(message);
+        JOptionPane.showMessageDialog(null, message);
     }
 
 }

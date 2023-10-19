@@ -17,6 +17,7 @@ public class DiaryAppTest {
     }
     @Test
     public  void testThatDiaryIsLocked(){
+        diary.lockDiary();
         Assertions.assertTrue(diary.isLocked());
     }
     @Test
@@ -26,6 +27,8 @@ public class DiaryAppTest {
     }
     @Test
     public void testThatDiaryCanBeUnlocked(){
+        diary.lockDiary();
+        Assertions.assertTrue(diary.isLocked());
         diary.unlockDiary("temitope");
         Assertions.assertTrue(diary.isLocked());
     }
@@ -38,7 +41,7 @@ public class DiaryAppTest {
     public void testThatEntryCanBeDeleted(){
         diary.createEntry(1,"Thoughts","These are my thoughts");
         diary.deleteEntry(1);
-        Assertions.assertThrows(IllegalArgumentException.class,()-> {diary.findEntry(1).getEntry();});
+        Assertions.assertThrows(IllegalArgumentException.class,()-> diary.findEntry(1).getEntry());
     }
     @Test
     public void testThatEntryCanBeUpdated(){

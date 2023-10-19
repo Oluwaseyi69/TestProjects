@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Diary {
-    private boolean isLocked = true;
+    private boolean isLocked ;
     private String username;
     private Entry Entry;
     private String password;
@@ -22,6 +22,7 @@ public class Diary {
     }
 
     public void lockDiary() {
+        isLocked = true;
     }
 
     public void unlockDiary(String password) {
@@ -31,10 +32,9 @@ public class Diary {
         this.password = password;
 
     }
-    public String validatePassword(String password) throws IllegalArgumentException {
+    public void validatePassword(String password) throws IllegalArgumentException {
         if (this.password.equals(password)) {
-
-            return password;
+            unlockDiary(password);
         } else {
             throw new IllegalArgumentException("Input correct information");
         }

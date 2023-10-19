@@ -2,38 +2,29 @@ package ArrayTest;
 
 public class RemoveElement {
     private int[] newCounter;
+    public int[] remove(int... numbers) {
+        int evenCount = 0;
 
-    public static void remove(int... numbers) {
-
-        int index = 0;
-//        int counter = 0;
-        int[] newNumber = new int[]{0};
-//        int[] newNumbers = new int[index];
-        for (index = 0; index < numbers.length ; index++) {
-            if (numbers[index] % 2 != 0) {
-                System.out.println(numbers[index]);
-                newNumber = new int[]{numbers[index - 2]};
-                System.out.println(newNumber);
-
+        // Count the number of even numbers
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                evenCount++;
             }
         }
+
+        // Create a new array to store the even numbers
+        int[] evenNumbers = new int[evenCount];
+        int evenIndex = 0;
+
+        // Populate the evenNumbers array with even elements
+        for (int number : numbers) {
+            if (number % 2 == 0) {
+                evenNumbers[evenIndex] = number;
+                evenIndex++;
+            }
+        }
+
+        return evenNumbers;
     }
-//    public static void minus(int... numbers){
-//        int index = 0;
-//        int newNumber = new int [];
-//        int counter = 0;
-//        int length = numbers.length;
-//        int newArray = 0;
-//        for (int newCounter = 0; newCounter < length; newCounter++) {
-//            if (numbers[newCounter] % 2 != 0) {
-//                numbers[index] = newNumber;
-//                newNumber= numbers[newCounter];
-//                counter++;
-//
-//
-////                System.out.println(numbers[newCounter]-2);
-//
-//            }
-//        }
-//    }
+
 }

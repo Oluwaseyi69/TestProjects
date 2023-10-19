@@ -24,7 +24,6 @@ public class TicTacToe {
             int playerPosition =  scanner.nextInt();
             while (playerPositions.contains(playerPosition) || computerPositions.contains(playerPosition))
                 System.out.println("Position taken! Enter a correct ");
-//            playerPosition = scanner.nextInt();
             piece(board, playerPosition, "player");
             String result = checkWinner();
             if (!result.isEmpty()){
@@ -78,7 +77,6 @@ public class TicTacToe {
             case 8 -> board[4][2] = symbol;
             case 9 -> board[4][4] = symbol;
             default -> {
-                break;
             }
         }
 

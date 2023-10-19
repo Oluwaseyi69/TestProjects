@@ -30,11 +30,11 @@ public class Entry {
     public void setBody(String body) {
         this.body = body;
     }
-    public void setUsername(String username){
-        this.username = username;
-    }
-
-    public String getUsername(){
-        return username;
-    }
+//    public void setUsername(String username){
+//        this.username = username;
+//    }
+//
+//    public String getUsername(){
+//        return username;
+//    }
 }

@@ -1,7 +1,5 @@
 package BankApp;
 
-import java.util.Scanner;
-
 public class AtmMachine {
     public static void main(String[] args) {
 //        private Scanner scanner = new Scanner(String prompt);
@@ -40,11 +38,6 @@ public class AtmMachine {
     }
 
     private static String input(String prompt) {
-//        boolean prompt;
-//        Scanner input = new Scanner(String prompt);
-//        System.out.println(prompt);
-//        return scanner.nextLIne();
-//
         return prompt;
     }
 }
