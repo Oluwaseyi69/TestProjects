@@ -4,8 +4,10 @@ package tomi;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 public class ReversalTest {
@@ -21,5 +23,14 @@ public class ReversalTest {
         assertIterableEquals(expected, actual);
 
 
+    }
+    @Test
+    public void testToReverseString(){
+        Reversal reversal = new Reversal();
+        String sentence = "A better place";
+
+        String actual = Arrays.toString(reversal.reverse(sentence));
+        String expected = "A retteb ecalp";
+        assertEquals(expected, actual);
     }
 }

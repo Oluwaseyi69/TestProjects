@@ -14,33 +14,23 @@ public class Reversal {
         }
         return linkedList;
     }
-//    public ArrayList
-//
-//    int[] isReversed(int[] number1, int [] number2) {
-////        int[] array1 = {1, 2, 3};
-////        int[] array2 = {4, 5, 6};
-//
-//    }
+
+
+
+
+    public char[] reverse(String sentence){
+        char[] resultSentence = sentence.toCharArray();
+        for (int i = resultSentence.length-1; i > 0 ; i++) {
+
+            System.out.println(resultSentence);
+        }
+        return resultSentence;
+    }
 }
 
 
-//
-//    int totalLength = number1.length + number2.length;
-//
-//    int[] newArray = new int[totalLength];
-//
-//        for (int i = 0; i < number2.length; i++) {
-//        newArray[i] = number2[number2.length - 1 - i];
-//        }
-//
-//        for (int i = 0; i < number1.length; i++) {
-//        newArray[number2.length + i] = number1[number1.length - 1 - i];
-//        }
-//
-//        for (int element : newArray) {
-//        System.out.print(element);
-//        }
-//
+
+
 
 
 
