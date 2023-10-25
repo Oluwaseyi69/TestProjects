@@ -6,12 +6,10 @@ public class Palindrome {
 
         for (int i = 0; i < word.length(); i++) {
             if (charArray[i] != charArray[word.length() -1 - i]){
-//                System.out.println("Not a palindrome");
                 return false;
             }
         }
 
-//        System.out.println("palindrome");;
         return true;
     }
 }
